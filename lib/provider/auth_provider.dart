@@ -19,11 +19,4 @@ class AuthProvider with ChangeNotifier {
     return false;
   }
 
-  
-  Future<void> logout() async {
-    _user = null;
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
-    notifyListeners();
-  }
 }

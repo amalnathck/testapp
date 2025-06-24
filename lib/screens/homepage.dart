@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _logout() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.clear(); // clear saved login data
+    await prefs.clear();
     if (!mounted) return;
     Navigator.pushAndRemoveUntil(
       context,
