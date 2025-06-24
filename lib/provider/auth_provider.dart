@@ -1,6 +1,6 @@
+import 'package:apitaskapp/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../services/auth_service.dart';
 
 class AuthProvider with ChangeNotifier {
   Map<String, dynamic>? _user;
@@ -19,6 +19,7 @@ class AuthProvider with ChangeNotifier {
     return false;
   }
 
+  
   Future<void> logout() async {
     _user = null;
     final prefs = await SharedPreferences.getInstance();
